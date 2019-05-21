@@ -66,10 +66,10 @@
 					</div>
 				</div>
 				<div class="col-lg-9">
-					<form class="contact-form">
-						<input type="text" placeholder="Enter your name">
-						<input type="text" placeholder="Enter your email address">
-						<textarea placeholder="Message ..."></textarea>
+					<form class="contact-form" action="./php/mail_sender.php" method="POST">
+						<input type="text" placeholder="Enter your name" name="username">
+						<input type="text" placeholder="Enter your email address" name="email">
+						<textarea placeholder="Message ..." name="message"></textarea>
 						<button class="site-btn sb-dark">Send</button>
 					</form>
 				</div>
@@ -137,5 +137,6 @@
 	<script src="js/magnific-popup.min.js"></script>
 	<script src="js/circle-progress.min.js"></script>
 	<script src="js/main.js"></script>
+	<?php require_once('./php/routes.php'); ?>
  </body>
 </html>
